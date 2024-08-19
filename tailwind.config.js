@@ -1,9 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./{html,js}"],
+  content: ["./src/*.{html,js}"],
   theme: {
     screens:{
-      xs: "360px",
+        
+        'sm': { 'max': '768px',}, // Define your desired breakpoint here
+        'md': { 'min': '769px'},
+        'lg': { 'min': '1024px'},
+        'mq1125': {raw: "screen and (max-width: 1125px)",},
+        'mq1050': {raw: "screen and (max-width: 1050px)",},
+        'mq750': {raw: "screen and (max-width: 750px)",},
+        'mq450': {raw: "screen and (max-width: 450px)",},
+        
     },
     extend: {
       colors: {
@@ -23,4 +31,3 @@ module.exports = {
   },
   plugins: [],
 }
-
